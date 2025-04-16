@@ -1,6 +1,6 @@
 document.getElementById('steam-login').addEventListener('click', function() {
   // Замените URL ниже на свой реальный адрес для Steam OpenID
-  const steamLoginURL = 'https://steamcommunity.com/openid/login?openid.realm=http://yourwebsite.com&openid.return_to=http://yourwebsite.com/steam-login-callback';
+  const steamLoginURL = 'https://steamcommunity.com/openid/login?openid.realm=http://TomBirdi910.github.io/media-partner-site&openid.return_to=http://TomBirdi910.github.io/media-partner-site/steam-login-callback';
   window.location.href = steamLoginURL;
 });
 
