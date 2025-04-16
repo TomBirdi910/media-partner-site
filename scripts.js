@@ -1,32 +1,19 @@
+// Убираем авторизацию через Steam
 document.getElementById('steam-login').addEventListener('click', function() {
-  // Замените URL ниже на свой реальный адрес для Steam OpenID
-  const steamLoginURL = 'https://steamcommunity.com/openid/login?openid.realm=http://TomBirdi910.github.io/media-partner-site&openid.return_to=http://TomBirdi910.github.io/media-partner-site/steam-login-callback';
-  window.location.href = steamLoginURL;
+  alert('Авторизация временно отключена');
 });
 
-// Функция для обработки обратного вызова после авторизации Steam
+// Функция для обработки обратного вызова (пока не используется)
 function handleSteamCallback() {
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.has('openid.claimed_id')) {
-    const steamID = urlParams.get('openid.claimed_id').split('/').pop(); // Получаем Steam ID
-    document.getElementById('steam-id').innerText = steamID;
-    // Здесь можно делать дальнейшую обработку, например, запросить Steam API для получения информации о пользователе
-  }
+  alert('Обработчик обратного вызова не используется');
 }
 
+// Функция для загрузки профиля (пока не используется)
 function loadUserProfile() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const steamID = urlParams.get('steamid');
-  const name = urlParams.get('name');
-  const avatar = urlParams.get('avatar');
-
-  document.getElementById('steam-id').innerText = steamID;
-  document.getElementById('profile-name').innerText = name;
-  document.getElementById('profile-avatar').src = avatar;
+  alert('Загрузка профиля отключена');
 }
 
 function submitReport(event) {
   event.preventDefault();
-  // Логика для отправки отчета
-  alert('Report submitted');
+  alert('Отчет подан');
 }
