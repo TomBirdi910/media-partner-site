@@ -1,14 +1,28 @@
 document.getElementById('steam-login').addEventListener('click', function() {
-  // Запрос на авторизацию через Steam
-  window.location.href = 'https://steamcommunity.com/openid/login?openid.realm=http://yourwebsite.com&openid.return_to=http://yourwebsite.com/steam-login-callback';
+  // Замените URL ниже на свой реальный адрес для Steam OpenID
+  const steamLoginURL = 'https://steamcommunity.com/openid/login?openid.realm=http://yourwebsite.com&openid.return_to=http://yourwebsite.com/steam-login-callback';
+  window.location.href = steamLoginURL;
 });
 
-// Пример обработки данных из Steam (после входа)
+// Функция для обработки обратного вызова после авторизации Steam
+function handleSteamCallback() {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('openid.claimed_id')) {
+    const steamID = urlParams.get('openid.claimed_id').split('/').pop(); // Получаем Steam ID
+    document.getElementById('steam-id').innerText = steamID;
+    // Здесь можно делать дальнейшую обработку, например, запросить Steam API для получения информации о пользователе
+  }
+}
+
 function loadUserProfile() {
-  // Здесь можно использовать API Steam для получения данных профиля
-  document.getElementById('steam-id').innerText = '1234567890'; // Пример Steam ID
-  document.getElementById('status').innerText = 'Active'; // Пример статуса
-  document.getElementById('reports-count').innerText = '5'; // Пример количества отчетов
+  const urlParams = new URLSearchParams(window.location.search);
+  const steamID = urlParams.get('steamid');
+  const name = urlParams.get('name');
+  const avatar = urlParams.get('avatar');
+
+  document.getElementById('steam-id').innerText = steamID;
+  document.getElementById('profile-name').innerText = name;
+  document.getElementById('profile-avatar').src = avatar;
 }
 
 function submitReport(event) {
