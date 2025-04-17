@@ -1,5 +1,3 @@
-
-/* Основные стили для сайта */
 body {
   font-family: Arial, sans-serif;
   background-color: #111;
@@ -10,15 +8,17 @@ body {
 
 /* Верхний блок с фоном и названием */
 .header {
-  background-color: #FF0000; /* Красный фон */
+  background: url('https://raw.githubusercontent.com/TomBirdi910/media-partner-site/main/assets/images/7b2708ae-5730-4d50-8b40-d1ecd1b1e227.jfif') no-repeat center center;
+  background-size: cover; /* Изображение заполняет весь блок */
   text-align: center;
-  padding: 50px 0;
+  padding: 100px 0; /* Увеличим отступы, чтобы фон был более заметен */
 }
 
 .header h1 {
   font-size: 50px;
   color: white;
   margin: 0;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Добавляем тень для текста, чтобы он был виден на фоне */
 }
 
 /* Основной контент */
