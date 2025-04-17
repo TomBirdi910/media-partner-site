@@ -3,7 +3,7 @@ body {
   font-family: 'Orbitron', sans-serif;
   background: #0e0e0e;
   color: white;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Убираем полосу прокрутки по горизонтали */
 }
 
 header {
@@ -54,12 +54,13 @@ header .brand .red {
   transition: 0.4s;
 }
 
+/* Меню, которое выезжает справа */
 .menu {
   display: none;
   position: fixed;
   top: 0;
-  left: -100%; /* Начальное положение меню за пределами экрана */
-  width: 250px; /* Ширина меню */
+  right: -330px; /* Начальная позиция меню за пределами экрана справа */
+  width: 330px; /* Фиксированная ширина меню */
   height: 100%;
   background-color: white;
   justify-content: center;
@@ -67,13 +68,13 @@ header .brand .red {
   flex-direction: column;
   z-index: 9998;
   opacity: 0;
-  transition: opacity 0.5s ease, left 0.5s ease; /* Плавная анимация */
+  transition: opacity 0.5s ease, right 0.5s ease; /* Плавное изменение opacity и right */
 }
 
 .menu.open {
   display: flex;
   opacity: 1;
-  left: 0; /* Меню двигается к экрану */
+  right: 0; /* Меню двигается к экрану */
 }
 
 .menu a {
@@ -97,7 +98,7 @@ header .brand .red {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 10000; /* Обеспечиваем, чтобы крестик был выше всех элементов */
 }
 
 footer {
