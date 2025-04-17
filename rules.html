@@ -9,20 +9,112 @@
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
+      background: #0e0e0e;
       color: white;
     }
 
-    .header {
-      background-color: #FF0000; /* Красный фон */
-      text-align: center;
-      padding: 100px 0;
+    /* Черный фон и квадрат с названием */
+    header {
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
     }
 
-    .content {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-      text-align: center;
+    header h1 {
+      font-size: 40px;
+      color: white;
+      margin: 0;
+    }
+
+    header .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    header .brand span {
+      font-size: 40px;
+    }
+
+    header .brand .white {
+      color: white;
+    }
+
+    header .brand .red {
+      color: #FF0000;
+    }
+
+    /* Гамбургер-меню */
+    .menu-icon {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    .menu-icon div {
+      width: 30px;
+      height: 5px;
+      background-color: white;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9998;
+    }
+
+    .menu a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      padding: 20px;
+      margin: 10px 0;
+    }
+
+    .menu a:hover {
+      background-color: #ff3131;
+      color: white;
+    }
+
+    .close-btn {
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .menu.open {
+      display: flex;
+      animation: openMenu 0.5s forwards;
+    }
+
+    @keyframes openMenu {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     footer {
@@ -32,15 +124,44 @@
       font-size: 0.9em;
       color: #aaa;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+        padding: 10px;
+      }
+      .menu-icon {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <h1>URFMEDIA | Правила партнерской системы</h1>
+  <header>
+    <div class="brand">
+      <span class="white">URF</span><span class="red">MEDIA</span>
+    </div>
+
+    <!-- Гамбургер-меню -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </header>
 
-  <div class="content">
+  <!-- Меню -->
+  <div class="menu" id="menu">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+    <a href="index.html">Главная</a>
+    <a href="briefing.html">Брифинг</a>
+    <a href="rules.html">Правила партнерской системы</a>
+    <a href="reports.html">Отчеты</a>
+  </div>
+
+  <!-- Основной контент -->
+  <div class="main-content">
     <h2>Правила партнерской системы</h2>
     <p>1. Все партнеры должны соблюдать общие правила поведения на сервере.</p>
     <p>2. Участие в партнерской программе дает доступ к уникальным возможностям.</p>
@@ -50,5 +171,11 @@
 
   <footer>© urf.im русское RP сообщество серверов в Garry's Mod</footer>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
