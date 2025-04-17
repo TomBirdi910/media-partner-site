@@ -74,12 +74,14 @@
       flex-direction: column;
       z-index: 9998;
       opacity: 0;
-      transition: opacity 0.5s ease; /* Плавное открытие */
+      transform: translateY(-100%);
+      transition: opacity 0.5s ease, transform 0.5s ease; /* Плавное открытие */
     }
 
     .menu.open {
       display: flex;
       opacity: 1;
+      transform: translateY(0);
     }
 
     .menu a {
@@ -129,16 +131,6 @@
       text-align: center;
       padding: 40px;
     }
-
-    .button {
-      background-color: #ff3131;
-      color: white;
-      text-decoration: none;
-      padding: 15px 30px;
-      font-size: 20px;
-      border-radius: 10px;
-      display: inline-block;
-    }
   </style>
 </head>
 <body>
@@ -167,10 +159,8 @@
 
   <!-- Основной контент -->
   <div class="main-content">
-    <h2>IP сервера: 5.42.211.112:24220</h2>
-    <a class="button" href="steam://connect/5.42.211.112:24220">Играть</a>
-    <p style="margin-top: 40px;">URFMEDIA — это уникальный RP-сервер с элементами SCP для Garry's Mod. Вас ждёт продуманная экономика, кастомные фичи и своя атмосфера.</p>
-    <p style="margin-top: 20px;">URFMEDIA - Сотрудничество и развитие блогеров.</p>
+    <h2>Добро пожаловать на URFMEDIA</h2>
+    <p>Здесь будет размещена информация о нашем проекте.</p>
   </div>
 
   <footer>© urf.im русское RP сообщество серверов в Garry's Mod</footer>
