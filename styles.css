@@ -1,15 +1,32 @@
 
-/* Стиль для основного меню */
+/* Основные стили для сайта */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 50px 0;
+}
+
+header h1 {
+  font-size: 50px;
+  color: #FF0000;
+}
+
+header p {
+  font-size: 20px;
+}
+
+/* Стили для меню */
 .menu {
-  display: none;
   background-color: #333;
-  color: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 100%;
-  padding-top: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
 .menu ul {
@@ -18,29 +35,42 @@
 }
 
 .menu ul li {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .menu ul li a {
   color: white;
   text-decoration: none;
-  padding: 10px;
-  display: block;
+  font-size: 20px;
 }
 
-/* Стиль для гамбургер-меню */
-.hamburger-icon {
+/* Стили для категорий */
+.categories {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.categories h2 {
   font-size: 30px;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  color: #FF0000;
 }
 
-.menu-open {
-  display: block;
+.categories ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
+.categories ul li {
+  margin: 20px 0;
+}
+
+.categories ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Стили для IP сервера (удалено) */
+.server-ip {
+  display: none;
 }

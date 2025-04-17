@@ -1,7 +1,2 @@
 
-const menuToggle = document.querySelector('.hamburger-icon');
-const menu = document.querySelector('.menu');
-
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('menu-open');
-});
+// Если требуется какой-то функционал для динамических элементов, можно добавить сюда.
