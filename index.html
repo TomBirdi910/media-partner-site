@@ -2,137 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>URFMEDIA — Главная</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: #0e0e0e;
-      color: white;
-      overflow-x: hidden; /* Убираем полосу прокрутки по горизонтали */
-    }
-
-    header {
-      background-color: #000000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 150px;
-      position: relative;
-    }
-
-    header .brand {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #000;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    header .brand span {
-      font-size: 40px;
-    }
-
-    header .brand .white {
-      color: white;
-    }
-
-    header .brand .red {
-      color: #FF0000;
-    }
-
-    /* Гамбургер-меню */
-    .menu-icon {
-      display: block;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 9999;
-    }
-
-    .menu-icon div {
-      width: 30px;
-      height: 5px;
-      background-color: white;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
-
-    /* Меню, которое выезжает справа */
-    .menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: -330px; /* Начальная позиция меню за пределами экрана справа */
-      width: 330px; /* Фиксированная ширина меню */
-      height: 100%;
-      background-color: white;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      z-index: 9998;
-      opacity: 0;
-      transition: opacity 0.5s ease, right 0.5s ease; /* Плавное изменение opacity и right */
-    }
-
-    .menu.open {
-      display: flex;
-      opacity: 1;
-      right: 0; /* Меню двигается к экрану */
-    }
-
-    .menu a {
-      color: black;
-      font-size: 20px;
-      text-decoration: none;
-      padding: 20px;
-      margin: 10px 0;
-      transition: background-color 0.3s ease;
-    }
-
-    .menu a:hover {
-      background-color: #ff3131;
-      color: white;
-    }
-
-    .close-btn {
-      color: black;
-      font-size: 40px;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 10000; /* Обеспечиваем, чтобы крестик был выше всех элементов */
-    }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-
-    @media (max-width: 600px) {
-      header .brand span {
-        font-size: 30px;
-      }
-      .menu-icon {
-        display: block;
-      }
-    }
-
-    .main-content {
-      text-align: center;
-      padding: 40px;
-    }
-  </style>
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -140,7 +12,6 @@
     <div class="brand">
       <span class="white">URF</span><span class="red">MEDIA</span>
     </div>
-
     <div class="menu-icon" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -157,8 +28,8 @@
   </div>
 
   <div class="main-content">
-    <h2>Добро пожаловать на URFMEDIA</h2>
-    <p>Здесь будет размещена информация о нашем проекте.</p>
+    <h2>Добро пожаловать в URFMEDIA</h2>
+    <p>Здесь будет размещена информация, которую можно будет обновить позже.</p>
   </div>
 
   <footer>© urf.im русское RP сообщество серверов в Garry's Mod</footer>
@@ -169,5 +40,6 @@
       menu.classList.toggle('open');
     }
   </script>
+
 </body>
 </html>
