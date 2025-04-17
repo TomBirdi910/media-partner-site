@@ -67,7 +67,7 @@ footer {
 
 /* Гамбургер меню */
 .menu {
-  display: none;
+  display: block; /* меню всегда доступно на ПК */
   position: fixed;
   top: 0;
   left: -250px; /* Скрыто за экраном */
@@ -108,8 +108,16 @@ footer {
 
 /* Адаптивность для мобильных устройств */
 @media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Скрыто по умолчанию на мобильных устройствах */
+  }
+
   .menu-icon {
     display: flex;
+  }
+
+  .menu.open {
+    display: block;
   }
 
   .menu a {
