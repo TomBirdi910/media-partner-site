@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <title>URFMEDIA — Главная</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
       background: #0e0e0e;
       color: white;
-      overflow-x: hidden;
+      overflow-x: hidden; /* Убираем полосу прокрутки по горизонтали */
     }
 
     header {
@@ -20,6 +19,7 @@
       justify-content: center;
       align-items: center;
       height: 150px;
+      position: relative;
     }
 
     header .brand {
@@ -60,12 +60,13 @@
       transition: 0.4s;
     }
 
+    /* Меню, которое выезжает слева */
     .menu {
       display: none;
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: -250px; /* Начальная позиция меню за пределами экрана */
+      width: 330px; /* Фиксированная ширина */
       height: 100%;
       background-color: white;
       justify-content: center;
@@ -73,14 +74,13 @@
       flex-direction: column;
       z-index: 9998;
       opacity: 0;
-      transform: translateY(-100%);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition: opacity 0.5s ease, left 0.5s ease; /* Плавное открытие меню */
     }
 
     .menu.open {
       display: flex;
       opacity: 1;
-      transform: translateY(0);
+      left: 0; /* Меню выезжает на экран */
     }
 
     .menu a {
