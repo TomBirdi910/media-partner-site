@@ -8,7 +8,7 @@ body {
 
 /* Верхний блок с фоном и названием */
 .header {
-  background: url('https://raw.githubusercontent.com/TomBirdi910/media-partner-site/main/assets/images/7b2708ae-5730-4d50-8b40-d1ecd1b1e227.jfif') no-repeat center center;
+  background: url('https://raw.githubusercontent.com/TomBirdi910/media-partner-site/main/7b2708ae-5730-4d50-8b40-d1ecd1b1e227.jfif') no-repeat center center;
   background-size: cover; /* Изображение заполняет весь блок */
   text-align: center;
   padding: 100px 0; /* Увеличим отступы, чтобы фон был более заметен */
