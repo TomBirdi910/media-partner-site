@@ -1,4 +1,7 @@
-// Гамбургер-меню
-document.getElementById('menu-toggle').addEventListener('click', function() {
-  document.getElementById('main-nav').classList.toggle('hidden');
+
+const menuToggle = document.querySelector('.hamburger-icon');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('menu-open');
 });
