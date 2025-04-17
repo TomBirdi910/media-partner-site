@@ -1,57 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>SunRise — Главная</title>
+  <title>URFMEDIA — Главная</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: #0e0e0e;
-      color: white;
-    }
-    header {
-      background: url('sunrise_banner.png') no-repeat center center;
-      background-size: cover;
-      padding: 100px 20px 80px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
       color: #fff;
-      text-shadow: 2px 2px #000;
-      background-color: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 10px;
+      margin: 0;
+      padding: 0;
     }
-    nav {
-      background: #1a1a1a;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px;
-      flex-wrap: wrap;
+
+    /* Верхний блок с текстом (без фона) */
+    .header {
+      background-color: #FF0000; /* Красный фон */
+      text-align: center;
+      padding: 100px 0; /* Увеличиваем отступы */
     }
-    nav a {
+
+    .header h1 {
+      font-size: 50px;
       color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
+      margin: 0;
     }
-    nav a.active {
-      color: #ff3131;
-    }
-    .content {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
+
+    /* Основной контент */
+    .main-content {
+      padding: 20px;
       text-align: center;
     }
+
     .button {
       background: linear-gradient(45deg, #ff3131, #ff6f6f);
       color: white;
@@ -64,9 +45,11 @@
       font-weight: bold;
       transition: 0.3s;
     }
+
     .button:hover {
       background: linear-gradient(45deg, #ff6f6f, #ff3131);
     }
+
     footer {
       background: #111;
       text-align: center;
@@ -74,44 +57,60 @@
       font-size: 0.9em;
       color: #aaa;
     }
-    ul, ol {
-      text-align: left;
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1em;
+
+    /* Стили для категорий */
+    .departments {
+      margin: 50px 0;
+      text-align: center;
     }
-    h2 {
-      color: #ff6f6f;
+
+    .departments h2 {
+      font-size: 30px;
+      color: #FF0000;
     }
-    img.icon {
-      width: 64px;
-      margin-bottom: 10px;
+
+    .departments ul {
+      list-style-type: none;
+      padding: 0;
     }
-    @media (max-width: 600px) {
-      header h1 { font-size: 2em; padding: 10px; }
-      .button { font-size: 16px; padding: 12px 20px; }
-      nav { gap: 10px; }
-      nav a { font-size: 14px; }
-      .content { padding: 20px 15px; }
+
+    .departments ul li {
+      margin: 20px 0;
     }
+
+    .departments ul li a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      border-bottom: 2px solid #FF0000;
+      padding: 10px;
+    }
+
   </style>
 </head>
 <body>
-  <header><h1>SunRise | SCP RP</h1></header>
-  <nav>
-    <a href="index.html" class='active'>Главная</a>
-    <a href="about.html" >О нас</a>
-    <a href="features.html" >Фичи</a>
-    <a href="updates.html" >Обновления</a>
-    <a href="howto.html" >Как играть</a>
-  </nav>
-  <div class="content">
-    
-        <h2>IP сервера: 5.42.211.112:24220</h2>
-        <a class="button" href="steam://connect/5.42.211.112:24220">Играть</a>
-        <p style="margin-top: 40px;">SunRise — это уникальный RP-сервер с элементами SCP для Garry's Mod. Вас ждёт продуманная экономика, кастомные фичи и своя атмосфера.</p>
-        
+
+  <header class="header">
+    <h1>URFMEDIA</h1>
+  </header>
+
+  <div class="main-content">
+    <h2>IP сервера: 5.42.211.112:24220</h2>
+    <a class="button" href="steam://connect/5.42.211.112:24220">Играть</a>
+    <p style="margin-top: 40px;">URFMEDIA — это уникальный RP-сервер с элементами SCP для Garry's Mod. Вас ждёт продуманная экономика, кастомные фичи и своя атмосфера.</p>
+    <p style="margin-top: 20px;">URFMEDIA - Сотрудничество и развитие блогеров.</p>
   </div>
-  <footer>&copy; 2025 SunRise Project</footer>
+
+  <div class="departments">
+    <h2>Категории</h2>
+    <ul>
+      <li><a href="briefing.html">Брифинг</a></li>
+      <li><a href="rules.html">Правила партнерской системы</a></li>
+      <li><a href="reports.html">Отчеты</a></li>
+    </ul>
+  </div>
+
+  <footer>© urf.im русское RP сообщество серверов в Garry's Mod</footer>
+
 </body>
 </html>
