@@ -43,6 +43,7 @@
       color: #FF0000;
     }
 
+    /* Гамбургер-меню */
     .menu-icon {
       display: block;
       position: absolute;
@@ -60,12 +61,12 @@
       transition: 0.4s;
     }
 
-    /* Меню, которое выезжает слева */
+    /* Меню, которое выезжает справа */
     .menu {
       display: none;
       position: fixed;
       top: 0;
-      left: -250px;
+      right: -330px;
       width: 330px;
       height: 100%;
       background-color: white;
@@ -74,13 +75,13 @@
       flex-direction: column;
       z-index: 9998;
       opacity: 0;
-      transition: opacity 0.5s ease, left 0.5s ease;
+      transition: opacity 0.5s ease, right 0.5s ease;
     }
 
     .menu.open {
       display: flex;
       opacity: 1;
-      left: 0;
+      right: 0;
     }
 
     .menu a {
