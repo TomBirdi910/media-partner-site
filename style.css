@@ -32,7 +32,7 @@ header .brand .white {
 }
 
 header .brand .red {
-  color: #ee6b14;
+  color: #ee6b14; /* Сделал слово MEDIA красным */
 }
 
 .menu-icon {
@@ -53,6 +53,8 @@ header .brand .red {
 .main-content {
   padding: 20px;
   text-align: center;
+  min-height: 400px;
+  padding-bottom: 60px; /* Чтобы текст внизу не перекрывался */
 }
 
 footer {
@@ -60,7 +62,7 @@ footer {
   color: white;
   padding: 10px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: auto; /* Текст "© urf.im" теперь в самом низу */
 }
 
 /* Гамбургер меню */
@@ -133,4 +135,17 @@ footer {
 
 .btn:hover {
   background-color: #b400ff;
+}
+
+/* Стили для текста внизу */
+footer p {
+  font-size: 14px;
+  color: white;
+}
+
+/* Убираем лишние отступы на мобильных устройствах */
+@media screen and (max-width: 768px) {
+  footer {
+    font-size: 12px;
+  }
 }
