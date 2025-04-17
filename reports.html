@@ -145,4 +145,28 @@
       <div></div>
       <div></div>
     </div>
- 
+  </header>
+
+  <div class="menu" id="menu">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+    <a href="index.html">Главная</a>
+    <a href="briefing.html">Брифинг</a>
+    <a href="rules.html">Правила партнерской системы</a>
+    <a href="reports.html">Отчеты</a>
+  </div>
+
+  <div class="main-content">
+    <h2>Отчеты</h2>
+    <p>Здесь будет размещена информация, которую можно будет обновить позже.</p>
+  </div>
+
+  <footer>© urf.im русское RP сообщество серверов в Garry's Mod</footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
