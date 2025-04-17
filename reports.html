@@ -6,18 +6,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
-    /* Стиль будет таким же, как на главной странице */
-    /* Вставьте сюда стили, которые вы использовали в index.html */
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0e0e0e;
+      color: white;
+    }
+    header {
+      background: url('sunrise_banner.png') no-repeat center center;
+      background-size: cover;
+      padding: 100px 20px 80px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px #000;
+      background-color: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    nav {
+      background: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav a.active {
+      color: #ff3131;
+    }
+    .content {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; padding: 10px; }
+    }
   </style>
 </head>
 <body>
   <header><h1>SunRise | Отчеты</h1></header>
   <nav>
     <a href="index.html">Главная</a>
-    <a href="about.html">О нас</a>
-    <a href="features.html">Фичи</a>
-    <a href="updates.html">Обновления</a>
-    <a href="howto.html">Как играть</a>
+    <a href="briefing.html">Брифинг</a>
+    <a href="rules.html">Правила партнерской системы</a>
     <a href="reports.html" class='active'>Отчеты</a>
   </nav>
 
