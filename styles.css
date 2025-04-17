@@ -8,69 +8,69 @@ body {
   padding: 0;
 }
 
-header {
+/* Верхний блок с фоном и названием */
+.header {
+  background-color: #FF0000; /* Красный фон */
   text-align: center;
   padding: 50px 0;
 }
 
-header h1 {
+.header h1 {
   font-size: 50px;
-  color: #FF0000;
+  color: white;
+  margin: 0;
 }
 
-header p {
-  font-size: 20px;
-}
-
-/* Стили для меню */
-.menu {
-  background-color: #333;
+/* Основной контент */
+.main-content {
   padding: 20px;
   text-align: center;
 }
 
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.menu ul li {
-  margin: 10px 0;
-}
-
-.menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-
 /* Стили для категорий */
-.categories {
-  padding: 40px 0;
-  text-align: center;
+.departments {
+  margin: 50px 0;
 }
 
-.categories h2 {
+.departments h2 {
   font-size: 30px;
   color: #FF0000;
 }
 
-.categories ul {
+.departments ul {
   list-style-type: none;
   padding: 0;
 }
 
-.categories ul li {
+.departments ul li {
   margin: 20px 0;
 }
 
-.categories ul li a {
+.departments ul li a {
   color: white;
   font-size: 20px;
   text-decoration: none;
+  border-bottom: 2px solid #FF0000;
+  padding: 10px;
 }
 
-/* Стили для IP сервера (удалено) */
-.server-ip {
-  display: none;
+/* Стили для дополнительной информации */
+.info {
+  margin-top: 40px;
+}
+
+.info p {
+  font-size: 20px;
+  color: #ccc;
+}
+
+/* Стили для адаптивности */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .departments ul li a {
+    font-size: 18px;
+  }
 }
