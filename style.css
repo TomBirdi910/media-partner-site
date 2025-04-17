@@ -5,6 +5,17 @@ body {
     box-sizing: border-box;
 }
 
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
 .menu-container {
     position: fixed;
     top: 0;
@@ -65,27 +76,6 @@ body {
     background-color: #444;
 }
 
-@media (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-
-    .nav-menu {
-        display: flex;
-        position: static;
-        width: auto;
-        box-shadow: none;
-    }
-
-    .nav-menu ul {
-        display: flex;
-    }
-
-    .nav-menu ul li {
-        margin-left: 20px;
-    }
-}
-
 footer {
     background-color: #16191b;
     color: white;
@@ -105,4 +95,25 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        position: static;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .nav-menu ul {
+        display: flex;
+    }
+
+    .nav-menu ul li {
+        margin-left: 20px;
+    }
 }
