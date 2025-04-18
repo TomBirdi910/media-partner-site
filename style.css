@@ -64,17 +64,17 @@ header {
     background-color: #333;
     position: fixed;
     top: 0;
-    right: -330px;
+    right: -330px; /* Скрытое меню справа */
     width: 330px;
     height: 100%;
     z-index: 1001;
-    transition: right 0.3s ease;
+    transition: right 0.3s ease; /* Плавное открытие меню */
     border-radius: 10px 0 0 10px;
 }
 
 .navbar.open {
     display: block;
-    right: 0;
+    right: 0; /* Меню появляется с правой стороны */
 }
 
 .navbar ul {
@@ -133,18 +133,19 @@ th, td {
 
 /* Анимации гамбургер-меню */
 .hamburger-menu.open .hamburger-line:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg); /* Верхняя полоса превращается в верхнюю часть крестика */
 }
 
 .hamburger-menu.open .hamburger-line:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* Средняя полоса исчезает */
 }
 
 .hamburger-menu.open .hamburger-line:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg); /* Нижняя полоса превращается в нижнюю часть крестика */
 }
 
-/* Стиль для крестика */
-.hamburger-menu.open .hamburger-line {
-    background-color: red; /* Крестик красного цвета */
+/* При закрытии гамбургер-меню, анимация возвращает полоски обратно */
+.hamburger-menu:not(.open) .hamburger-line {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
 }
