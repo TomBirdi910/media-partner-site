@@ -1,4 +1,6 @@
-function toggleMenu() {
-    const menu = document.querySelector('.nav-menu');
-    menu.style.display = (menu.style.display === 'block' ? 'none' : 'block');
-}
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const navbar = document.getElementById('navbar');
+
+hamburgerMenu.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+});
