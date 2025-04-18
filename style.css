@@ -7,12 +7,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: black; /* Черный фон для всех страниц */
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #333;
+    text-align: center; /* Центрируем весь текст на страницах */
 }
 
 /* Заголовок */
@@ -35,11 +36,11 @@ header {
 }
 
 .sunrise {
-    color: blue;
+    color: blue; /* Синий для SunRise */
 }
 
 .media {
-    color: red;
+    color: red; /* Красный для Media */
 }
 
 /* Гамбургер-меню */
@@ -54,7 +55,7 @@ header {
     width: 28px;
     height: 3px;
     background-color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Навигационное меню */
@@ -100,7 +101,6 @@ header {
 .content {
     margin-top: 70px;
     padding: 20px;
-    text-align: center;
 }
 
 h2 {
@@ -142,4 +142,9 @@ th, td {
 
 .hamburger-menu.open .hamburger-line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Стиль для крестика */
+.hamburger-menu.open .hamburger-line {
+    background-color: red; /* Крестик красного цвета */
 }
