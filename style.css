@@ -1,3 +1,4 @@
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -5,21 +6,32 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
 }
 
+/* Заголовок */
 header {
     background-color: #333;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .sunrise {
@@ -30,65 +42,88 @@ header {
     color: red;
 }
 
+/* Гамбургер-меню */
 .hamburger-menu {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
 }
 
 .hamburger-line {
-    width: 30px;
+    width: 28px;
     height: 3px;
     background-color: white;
     transition: transform 0.3s ease;
 }
 
+/* Навигационное меню */
 .navbar {
     display: none;
     background-color: #333;
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 0;
+    right: -330px;
+    width: 330px;
+    height: 100%;
+    z-index: 1001;
+    transition: right 0.3s ease;
+    border-radius: 10px 0 0 10px;
+}
+
+.navbar.open {
+    display: block;
     right: 0;
-    width: 200px;
-    border-radius: 10px;
 }
 
 .navbar ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
 }
 
 .navbar ul li {
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
 }
 
 .navbar ul li a {
     color: white;
     text-decoration: none;
+    font-size: 20px;
 }
 
-.navbar.open {
-    display: block;
+.navbar ul li a:hover {
+    color: blue;
 }
 
+/* Контент на страницах */
 .content {
     margin-top: 70px;
     padding: 20px;
+    text-align: center;
 }
 
-section {
+h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
+p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Стиль для таблицы */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #ddd;
 }
 
 th, td {
@@ -96,6 +131,7 @@ th, td {
     text-align: left;
 }
 
+/* Анимации гамбургер-меню */
 .hamburger-menu.open .hamburger-line:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
