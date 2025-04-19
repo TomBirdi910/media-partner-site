@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Система рангов - SunRise-Media</title>
+    <title>Система Рангов - SunRise-Media</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,28 +12,26 @@
         <div class="logo">
             <span class="sunrise">SunRise</span><span class="media">Media</span>
         </div>
-        <div class="hamburger-menu" id="hamburger-menu">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-        </div>
     </header>
 
     <nav id="navbar" class="navbar">
         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="reports.html">Отчёты</a></li>
-            <li><a href="profile.html">Профиль</a></li>
-            <li><a href="briefing.html">Брифинг</a></li>
-            <li><a href="rules.html">Правила партнерства</a></li>
-            <li><a href="chat.html">Чат</a></li>
-            <li><a href="ranks.html">Система рангов</a></li>
+            <li><a href="reports.html" id="reports-link">Отчёты</a></li>
+            <li><a href="profile.html" id="profile-link">Профиль</a></li>
+            <li><a href="briefing.html" id="briefing-link">Брифинг</a></li>
+            <li><a href="rules.html" id="rules-link">Правила партнерства</a></li>
+            <li><a href="chat.html" id="chat-link">Чат</a></li>
+            <li><a href="ranks.html" id="ranks-link">Система рангов</a></li>
         </ul>
     </nav>
 
     <div class="content">
-        <h2>Система рангов</h2>
-        <p>Здесь будет информация о системе рангов...</p>
+        <h2>Система Рангов</h2>
+        <div id="rank-info"></div>
+        <div id="admin-actions" class="hidden">
+            <h3>Администраторский доступ</h3>
+            <button>Изменить ранг пользователя</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
