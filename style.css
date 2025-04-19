@@ -33,25 +33,14 @@ header {
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Логотип в круге */
-.logo-circle {
-    width: 100px;
-    height: 100px;
-    background-color: #333;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    display: inline-block;
+    font-size: 28px;
     font-weight: bold;
 }
 
+/* Логотип */
 .sunrise {
     color: white; /* Белый цвет для SunRise */
 }
@@ -82,7 +71,7 @@ header {
     background-color: transparent;
     width: 100%;
     position: fixed;
-    top: 120px; /* Отступ для меню ниже логотипа */
+    top: 70px; /* Отступ для меню выше логотипа */
     z-index: 1001;
 }
 
