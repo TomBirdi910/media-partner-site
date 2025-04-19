@@ -10,9 +10,10 @@ body {
     background-color: black; /* Черный фон для всех страниц */
     color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -43,10 +44,10 @@ header {
     color: red;
 }
 
-/* Гамбургер-меню */
+/* Гамбургер-меню для мобильных устройств */
 .hamburger-menu {
     cursor: pointer;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 4px;
 }
@@ -60,31 +61,25 @@ header {
 
 /* Навигационное меню */
 .navbar {
-    display: none;
+    display: flex;
+    justify-content: space-around;
     background-color: #333;
+    width: 100%;
+    padding: 20px 0;
     position: fixed;
     top: 0;
-    right: -330px; /* Скрытое меню справа */
-    width: 330px;
-    height: 100%;
+    left: 0;
     z-index: 1001;
-    transition: right 0.3s ease; /* Плавное открытие меню */
-    border-radius: 10px 0 0 10px;
-}
-
-.navbar.open {
-    display: block;
-    right: 0; /* Меню появляется с правой стороны */
 }
 
 .navbar ul {
     list-style-type: none;
-    padding: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .navbar ul li {
-    text-align: center;
-    padding: 20px 0;
+    padding: 10px 20px;
 }
 
 .navbar ul li a {
@@ -148,4 +143,39 @@ th, td {
 .hamburger-menu:not(.open) .hamburger-line {
     transform: translateY(0) rotate(0);
     opacity: 1;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    /* Для мобильных устройств показываем гамбургер-меню */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar {
+        display: none; /* Скрываем обычное меню для мобильных устройств */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: #333;
+        z-index: 1002;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar.open {
+        display: flex; /* Показываем меню при открытии */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul li {
+        padding: 15px 0;
+    }
 }
