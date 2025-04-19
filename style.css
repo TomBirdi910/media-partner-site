@@ -19,9 +19,9 @@ body {
 
 /* Заголовок */
 header {
-    background-color: #333;
+    background-color: transparent;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +33,23 @@ header {
 }
 
 .logo {
-    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Логотип в круге */
+.logo-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .sunrise {
@@ -62,13 +78,11 @@ header {
 /* Навигационное меню */
 .navbar {
     display: flex;
-    justify-content: space-around;
-    background-color: #333;
+    justify-content: center;
+    background-color: transparent;
     width: 100%;
-    padding: 20px 0;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 120px; /* Отступ для меню ниже логотипа */
     z-index: 1001;
 }
 
@@ -80,12 +94,32 @@ header {
 
 .navbar ul li {
     padding: 10px 20px;
+    transition: transform 0.3s ease;
 }
 
 .navbar ul li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Стиль для квадратиков */
+.navbar ul li {
+    border: 2px solid white;
+    border-radius: 8px;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Подсветка при наведении */
+.navbar ul li:hover {
+    background-color: #444;
+    transform: scale(1.1);
 }
 
 .navbar ul li a:hover {
@@ -94,7 +128,7 @@ header {
 
 /* Контент на страницах */
 .content {
-    margin-top: 70px;
+    margin-top: 150px;
     padding: 20px;
 }
 
